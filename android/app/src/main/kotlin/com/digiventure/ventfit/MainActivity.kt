@@ -1,4 +1,4 @@
-package com.digiventure.ventmass
+package com.digiventure.ventfit
 
 import io.flutter.embedding.android.FlutterActivity
 

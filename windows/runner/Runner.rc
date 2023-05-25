@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.digiventure" "\0"
-            VALUE "FileDescription", "ventmass" "\0"
+            VALUE "FileDescription", "ventfit" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "ventmass" "\0"
+            VALUE "InternalName", "ventfit" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.digiventure. All rights reserved." "\0"
-            VALUE "OriginalFilename", "ventmass.exe" "\0"
-            VALUE "ProductName", "ventmass" "\0"
+            VALUE "OriginalFilename", "ventfit.exe" "\0"
+            VALUE "ProductName", "ventfit" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = ventmass
+PRODUCT_NAME = ventfit
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.digiventure.ventmass
+PRODUCT_BUNDLE_IDENTIFIER = com.digiventure.ventfit
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2023 com.digiventure. All rights reserved.

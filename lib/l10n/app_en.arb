@@ -1,0 +1,19 @@
+{
+  "verySevereUnderWeight": "very severe underweight",
+  "severeUnderweight": "severely underweight",
+  "underweight": "underweight",
+  "normal": "normal",
+  "overweight": "overweight",
+  "obese1": "obese class 1",
+  "obese2": "obese class 2",
+  "obese3": "obese class 3",
+
+  "verySevereUnderweightScale": "≤ 15.9",
+  "severeUnderweightScale": "16.0 - 16.9",
+  "underweightScale": "17.0 - 18.4",
+  "normalScale": "18.5 - 24.9",
+  "overweightScale": "25.0 - 29.9",
+  "obese1Scale": "30.0 - 34.9",
+  "obese2Scale": "35.0 - 39.9",
+  "obese3Scale": "≥ 40.0"
+}

@@ -35,7 +35,10 @@ var darkTheme = ThemeData(
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: silverMistral),
     bodyMedium: TextStyle(color: silverMistral),
+    bodySmall: TextStyle(color: silverMistral),
     titleLarge: TextStyle(color: silverMistral),
+    titleMedium: TextStyle(color: silverMistral),
+    titleSmall: TextStyle(color: silverMistral),
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: TextStyle(color: silverMistral.withOpacity(0.8), fontSize: 14),

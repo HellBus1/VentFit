@@ -27,5 +27,7 @@
 
   "enterYourData": "Enter your data",
   "yourBmiResult": "Your BMI result",
-  "bmiScaleAndMetric": "BMI scale and metric"
+  "bmiScaleAndMetric": "BMI scale and metric",
+
+  "bmiScore": "BMI Score"
 }

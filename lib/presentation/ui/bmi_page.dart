@@ -71,7 +71,8 @@ class BMIPage extends StatelessWidget {
                   child: WeightMetric(),
                 ),
               ),
-            )
+            ),
+            const SizedBox(height: 16),
           ],
         ),
       ),

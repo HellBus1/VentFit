@@ -2,10 +2,4 @@ import 'package:flutter/material.dart';
 
 const fontName = 'Roboto';
 
-const headline = TextStyle();
-
-const title = TextStyle();
-
-const body1 = TextStyle();
-
-const label = TextStyle();
+const bodyLarge = TextStyle(fontSize: 16, letterSpacing: 0.15);

@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-const white = Color(0x00ffffff);
+const white = Color(0xFFffffff);
 const whiteSolid = Color(0xFFf2f5fa);
 const blackRibbon = Color(0xFF484b51);
 

@@ -6,7 +6,10 @@ var lightTheme = ThemeData(
   cardColor: white,
   appBarTheme: const AppBarTheme(
     backgroundColor: white,
-    foregroundColor: Color(0xff000000),
+    elevation: 1,
+  ),
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: blackRibbon),
   ),
 );
 
@@ -15,6 +18,9 @@ var darkTheme = ThemeData(
   cardColor: nobleBlack,
   appBarTheme: const AppBarTheme(
     backgroundColor: nobleBlack,
-    foregroundColor: Color(0xffffffff),
+    elevation: 1,
+  ),
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: silverMistral),
   ),
 );

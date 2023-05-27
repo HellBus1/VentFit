@@ -10,6 +10,18 @@ var lightTheme = ThemeData(
   ),
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: blackRibbon),
+    bodyMedium: TextStyle(color: blackRibbon),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    hintStyle: TextStyle(color: blackRibbon.withOpacity(0.8), fontSize: 14),
+    labelStyle: const TextStyle(color: blackRibbon),
+    focusedBorder: const OutlineInputBorder(
+      borderSide: BorderSide(color: blackRibbon),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: blackRibbon.withOpacity(0.8)),
+    ),
+    prefixIconColor: blackRibbon,
   ),
 );
 
@@ -22,5 +34,18 @@ var darkTheme = ThemeData(
   ),
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: silverMistral),
+    bodyMedium: TextStyle(color: silverMistral),
+    titleLarge: TextStyle(color: silverMistral),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    hintStyle: TextStyle(color: silverMistral.withOpacity(0.8), fontSize: 14),
+    labelStyle: const TextStyle(color: silverMistral),
+    focusedBorder: const OutlineInputBorder(
+      borderSide: BorderSide(color: silverMistral),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: silverMistral.withOpacity(0.8)),
+    ),
+    prefixIconColor: silverMistral,
   ),
 );

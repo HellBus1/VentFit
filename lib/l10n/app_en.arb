@@ -15,5 +15,17 @@
   "overweightScale": "25.0 - 29.9",
   "obese1Scale": "30.0 - 34.9",
   "obese2Scale": "35.0 - 39.9",
-  "obese3Scale": "≥ 40.0"
+  "obese3Scale": "≥ 40.0",
+
+  "age": "age",
+  "weight": "weight",
+  "height": "height",
+  "cm": "cm",
+  "inch": "inches",
+  "kg": "kg",
+  "pounds": "pounds",
+
+  "enterYourData": "Enter your data",
+  "yourBmiResult": "Your BMI result",
+  "bmiScaleAndMetric": "BMI scale and metric"
 }

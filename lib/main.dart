@@ -12,13 +12,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      title: 'VentFit',
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      routes: Routes.getRoutes(context),
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
+      child: MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        title: 'VentFit',
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        routes: Routes.getRoutes(context),
+      ),
     );
   }
 }

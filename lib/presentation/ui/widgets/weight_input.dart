@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:ventfit/presentation/ui/bloc/bmi_bloc.dart';
+import 'package:ventfit/presentation/ui/bloc/bmi_event.dart';
+import 'package:ventfit/presentation/ui/bloc/bmi_state.dart';
 
 class WeightInput extends StatelessWidget {
   const WeightInput({super.key});
@@ -7,60 +11,41 @@ class WeightInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var localText = AppLocalizations.of(context);
-    var theme = Theme.of(context);
 
-    var heightList = [localText?.cm ?? "", localText?.inch ?? ""];
-    var weightList = [localText?.kg ?? "", localText?.pounds ?? ""];
-
-    return Column(
-      children: [
-        _inputItemWidget(
-          localText?.age,
-          localText?.age,
-          Icons.filter_2,
-        ),
-        const SizedBox(height: 16),
-        Row(
+    return BlocConsumer<BMIBloc, BMIState>(
+      listener: (context, state) {},
+      builder: (context, state) {
+        return Column(
           children: [
-            Expanded(
-              child: _inputItemWidget(
-                localText?.height,
-                localText?.height,
-                Icons.height,
-              ),
+            Row(
+              children: [
+                Expanded(
+                  child: _inputItemWidget(
+                    "${localText?.height} (${localText?.cm})",
+                    localText?.height,
+                    Icons.height,
+                    (p0) =>
+                        context.read<BMIBloc>().add(BMIEvent.heightChanged(p0)),
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(width: 24),
-            SizedBox(
-              child: _dropdownItemWidget(
-                heightList,
-                heightList.first,
-                (p0) => null,
-                theme,
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 16),
-        Row(
-          children: [
-            Expanded(
-                child: _inputItemWidget(
-              localText?.weight,
-              localText?.weight,
-              Icons.fitness_center,
-            )),
-            const SizedBox(width: 24),
-            SizedBox(
-              child: _dropdownItemWidget(
-                weightList,
-                weightList.first,
-                (p0) => null,
-                theme,
-              ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(
+                    child: _inputItemWidget(
+                  "${localText?.weight} (${localText?.kg})",
+                  localText?.weight,
+                  Icons.fitness_center,
+                  (p0) =>
+                      context.read<BMIBloc>().add(BMIEvent.weightChanged(p0)),
+                )),
+              ],
             )
           ],
-        )
-      ],
+        );
+      },
     );
   }
 
@@ -68,6 +53,7 @@ class WeightInput extends StatelessWidget {
     String? label,
     String? hint,
     IconData icon,
+    Function(String) onChanged,
   ) {
     return TextFormField(
       maxLines: 1,
@@ -79,25 +65,8 @@ class WeightInput extends StatelessWidget {
         contentPadding:
             const EdgeInsets.only(left: 12, right: 12, top: 10, bottom: 10),
       ),
-    );
-  }
-
-  _dropdownItemWidget(
-    List<String> list,
-    String value,
-    Function(String?) onChange,
-    ThemeData theme,
-  ) {
-    return DropdownButton(
-      value: value,
-      style: theme.textTheme.bodyMedium,
-      onChanged: onChange,
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
+      onChanged: (value) => onChanged(value),
+      keyboardType: TextInputType.number,
     );
   }
 }

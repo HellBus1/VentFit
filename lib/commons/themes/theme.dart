@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ventfit/ui/color.dart';
+import 'package:ventfit/commons/themes/color.dart';
 
 var lightTheme = ThemeData(
   scaffoldBackgroundColor: whiteSolid,

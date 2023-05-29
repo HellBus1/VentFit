@@ -8,6 +8,8 @@
   "obese2": "obese class 2",
   "obese3": "obese class 3",
 
+  "normalWeight": "normal weight",
+
   "verySevereUnderweightScale": "≤ 15.9",
   "severeUnderweightScale": "16.0 - 16.9",
   "underweightScale": "17.0 - 18.4",

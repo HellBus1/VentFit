@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ventfit/presentation/route/routes.dart';
-import 'package:ventfit/ui/theme.dart';
+import 'package:ventfit/commons/themes/theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() {
+import 'dependency_injection.dart';
+
+Future<void> main() async {
+  await initializeDependencies();
   runApp(const MyApp());
 }
 

@@ -31,5 +31,12 @@
   "yourBmiResult": "Your BMI result",
   "bmiScaleAndMetric": "BMI scale and metric",
 
-  "bmiScore": "BMI Score"
+  "bmiScore": "BMI Score",
+  "bmiPageTitle": "BMI Calculator",
+
+  "rateApp": "Rate App",
+  "rateAppDescription": "Rate us on the Play Store!",
+  "moreApps": "More apps",
+  "moreAppsDescription": "Visit our developer page",
+  "appVersion": "Version"
 }

@@ -11,6 +11,14 @@ var lightTheme = ThemeData(
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: blackRibbon),
     bodyMedium: TextStyle(color: blackRibbon),
+    bodySmall: TextStyle(color: blackRibbon),
+    titleLarge: TextStyle(color: blackRibbon),
+    titleMedium: TextStyle(color: blackRibbon),
+    titleSmall: TextStyle(color: blackRibbon),
+  ),
+  iconTheme: const IconThemeData(color: blackRibbon),
+  drawerTheme: const DrawerThemeData(
+    backgroundColor: white,
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: TextStyle(color: blackRibbon.withOpacity(0.8), fontSize: 14),
@@ -39,6 +47,10 @@ var darkTheme = ThemeData(
     titleLarge: TextStyle(color: silverMistral),
     titleMedium: TextStyle(color: silverMistral),
     titleSmall: TextStyle(color: silverMistral),
+  ),
+  iconTheme: const IconThemeData(color: silverMistral),
+  drawerTheme: const DrawerThemeData(
+    backgroundColor: nobleBlack,
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: TextStyle(color: silverMistral.withOpacity(0.8), fontSize: 14),

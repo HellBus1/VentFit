@@ -1,9 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ventfit/presentation/ui/bloc/auth_value_objects.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_event.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_state.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:ventfit/presentation/bmi/bloc/auth_value_objects.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_event.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_state.dart';
 
 import '../../../commons/extension/double_extension.dart';
 

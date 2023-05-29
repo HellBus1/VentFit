@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_bloc.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_event.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_state.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_bloc.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_event.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_state.dart';
 
 class WeightInput extends StatelessWidget {
   const WeightInput({super.key});

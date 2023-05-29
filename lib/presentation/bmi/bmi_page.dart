@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:ventfit/dependency_injection.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_bloc.dart';
-import 'package:ventfit/presentation/ui/widgets/weight_input.dart';
-import 'package:ventfit/presentation/ui/widgets/weight_metric.dart';
-import 'package:ventfit/presentation/ui/widgets/weight_scale_result.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_bloc.dart';
+import 'package:ventfit/presentation/bmi/widgets/weight_input.dart';
+import 'package:ventfit/presentation/bmi/widgets/weight_metric.dart';
+import 'package:ventfit/presentation/bmi/widgets/weight_scale_result.dart';
+import 'package:ventfit/presentation/drawer/base_drawer.dart';
 
 class BMIPage extends StatelessWidget {
   const BMIPage({super.key});
@@ -16,7 +17,10 @@ class BMIPage extends StatelessWidget {
     var theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(localText?.bmiPageTitle ?? ""),
+      ),
+      drawer: const BaseDrawer(),
       body: BlocProvider(
         create: (context) => getIt<BMIBloc>(),
         child: SingleChildScrollView(

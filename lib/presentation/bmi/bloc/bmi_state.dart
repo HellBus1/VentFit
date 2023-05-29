@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ventfit/presentation/ui/bloc/auth_value_objects.dart';
+import 'package:ventfit/presentation/bmi/bloc/auth_value_objects.dart';
 
 part 'bmi_state.freezed.dart';
 

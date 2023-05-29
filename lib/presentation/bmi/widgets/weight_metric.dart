@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_bloc.dart';
-import 'package:ventfit/presentation/ui/bloc/bmi_state.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_bloc.dart';
+import 'package:ventfit/presentation/bmi/bloc/bmi_state.dart';
 import '../../../commons/extension/string_extension.dart';
 
 class WeightMetric extends StatelessWidget {
@@ -150,7 +150,10 @@ class WeightMetric extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 4),
-        const Divider(thickness: 2),
+        Divider(
+          thickness: 1,
+          color: theme.textTheme.bodyMedium?.color ?? Colors.black,
+        ),
         const SizedBox(height: 8),
       ],
     );
@@ -164,27 +167,35 @@ class WeightMetric extends StatelessWidget {
   ) {
     var range = (lower == upper) ? "$lower" : "$lower - $upper";
 
-    return Column(
-      children: [
-        const SizedBox(height: 8),
-        const Divider(thickness: 2),
-        const SizedBox(height: 4),
-        Row(
-          children: [
-            Expanded(
-              child: Text(
-                normalWeight.toCapitalized(),
-                style: theme.textTheme.bodyLarge?.copyWith(color: Colors.green),
+    if (!(range == "0.0")) {
+      return Column(
+        children: [
+          const SizedBox(height: 8),
+          Divider(
+            thickness: 1,
+            color: theme.textTheme.bodyMedium?.color ?? Colors.black,
+          ),
+          const SizedBox(height: 4),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  normalWeight.toCapitalized(),
+                  style:
+                      theme.textTheme.bodyLarge?.copyWith(color: Colors.green),
+                ),
               ),
-            ),
-            Text(
-              range.toCapitalized(),
-              style: theme.textTheme.bodyLarge?.copyWith(color: Colors.green),
-            )
-          ],
-        )
-      ],
-    );
+              Text(
+                range.toCapitalized(),
+                style: theme.textTheme.bodyLarge?.copyWith(color: Colors.green),
+              )
+            ],
+          )
+        ],
+      );
+    }
+
+    return const SizedBox();
   }
 
   String? _getCategoryText(int category, AppLocalizations? localText) {

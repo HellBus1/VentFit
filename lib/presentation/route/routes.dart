@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:ventfit/presentation/ui/bmi_page.dart';
+import 'package:ventfit/presentation/bmi/bmi_page.dart';
 
 class Routes {
   static const String bmiPath = "/";

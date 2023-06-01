@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ventfit/commons/themes/color.dart';
 
 var lightTheme = ThemeData(
@@ -7,6 +8,18 @@ var lightTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: white,
     elevation: 1,
+    iconTheme: IconThemeData(color: blackRibbon, size: 24),
+    actionsIconTheme: IconThemeData(color: blackRibbon, size: 24),
+    titleTextStyle: TextStyle(
+      color: blackRibbon,
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+    ),
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: white,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.dark,
+    ),
   ),
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: blackRibbon),
@@ -39,6 +52,17 @@ var darkTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: nobleBlack,
     elevation: 1,
+    iconTheme: IconThemeData(color: silverMistral, size: 24),
+    titleTextStyle: TextStyle(
+      color: silverMistral,
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+    ),
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: nobleBlack,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.light,
+    ),
   ),
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: silverMistral),

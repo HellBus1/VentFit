@@ -38,6 +38,8 @@ class WeightScaleResult extends StatelessWidget {
               maximum: 40,
               interval: 8,
               showLabels: false,
+              showAxisTrack: false,
+              showTicks: false,
               ranges: [
                 LinearGaugeRange(
                   color: Colors.blue,

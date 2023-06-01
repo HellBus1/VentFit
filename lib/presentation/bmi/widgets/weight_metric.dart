@@ -18,6 +18,7 @@ class WeightMetric extends StatelessWidget {
       builder: (context, state) {
         var severity = _getCategoryText(state.bmiCategory, localText);
         var color = _getColor(state.bmiScore);
+        var bmiCategory = state.bmiCategory;
 
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +36,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.verySevereUnderWeight,
                   localText?.verySevereUnderweightScale,
-                  false,
+                  bmiCategory == 1,
                   theme,
                   color,
                 ),
@@ -43,7 +44,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.severeUnderweight,
                   localText?.severeUnderweightScale,
-                  false,
+                  bmiCategory == 2,
                   theme,
                   color,
                 ),
@@ -51,7 +52,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.underweight,
                   localText?.underweightScale,
-                  false,
+                  bmiCategory == 3,
                   theme,
                   color,
                 ),
@@ -59,7 +60,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.normal,
                   localText?.normalScale,
-                  false,
+                  bmiCategory == 4,
                   theme,
                   color,
                 ),
@@ -67,7 +68,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.overweight,
                   localText?.overweightScale,
-                  false,
+                  bmiCategory == 5,
                   theme,
                   color,
                 ),
@@ -75,7 +76,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.obese1,
                   localText?.obese1Scale,
-                  false,
+                  bmiCategory == 6,
                   theme,
                   color,
                 ),
@@ -83,7 +84,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.obese2,
                   localText?.obese2Scale,
-                  false,
+                  bmiCategory == 8,
                   theme,
                   color,
                 ),
@@ -91,7 +92,7 @@ class WeightMetric extends StatelessWidget {
                 _metricItemWidget(
                   localText?.obese3,
                   localText?.obese3Scale,
-                  false,
+                  bmiCategory == 9,
                   theme,
                   color,
                 ),
@@ -116,11 +117,17 @@ class WeightMetric extends StatelessWidget {
     ThemeData theme,
     Color? color,
   ) {
+    var textStyle = theme.textTheme.bodyLarge;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text((type ?? "").toTitleCase(), style: theme.textTheme.bodyLarge),
-        Text((scale ?? "").toTitleCase(), style: theme.textTheme.bodyLarge),
+        Text((type ?? "").toTitleCase(),
+            style:
+                (isSelected) ? textStyle?.copyWith(color: color) : textStyle),
+        Text((scale ?? "").toTitleCase(),
+            style:
+                (isSelected) ? textStyle?.copyWith(color: color) : textStyle),
       ],
     );
   }
@@ -181,13 +188,12 @@ class WeightMetric extends StatelessWidget {
               Expanded(
                 child: Text(
                   normalWeight.toCapitalized(),
-                  style:
-                      theme.textTheme.bodyLarge?.copyWith(color: Colors.green),
+                  style: theme.textTheme.bodyLarge,
                 ),
               ),
               Text(
                 range.toCapitalized(),
-                style: theme.textTheme.bodyLarge?.copyWith(color: Colors.green),
+                style: theme.textTheme.bodyLarge,
               )
             ],
           )

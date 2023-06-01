@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upgrader/upgrader.dart';
 import 'package:ventfit/presentation/route/routes.dart';
 import 'package:ventfit/commons/themes/theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -22,13 +23,15 @@ class MyApp extends StatelessWidget {
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
       },
-      child: MaterialApp(
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: AppLocalizations.supportedLocales,
-        title: 'VentFit',
-        theme: lightTheme,
-        darkTheme: darkTheme,
-        routes: Routes.getRoutes(context),
+      child: UpgradeAlert(
+        child: MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          title: 'VentFit',
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          routes: Routes.getRoutes(context),
+        ),
       ),
     );
   }

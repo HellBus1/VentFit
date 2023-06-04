@@ -19,7 +19,6 @@ class _BaseDrawerState extends State<BaseDrawer> {
 
   @override
   void initState() {
-    bloc.add(const GetAppVersionEvent());
     super.initState();
   }
 
@@ -80,10 +79,7 @@ class _BaseDrawerState extends State<BaseDrawer> {
                   minLeadingWidth: 0,
                   dense: true,
                   title: Text(localText?.appVersion ?? ""),
-                  subtitle: (state is LoadedAppVersionDrawerState)
-                      ? Text(
-                          "${localText?.appVersion} ${state.packageInfo.version}")
-                      : null,
+                  subtitle: Text("${localText?.appVersion} 1.0.0"),
                 ),
               ],
             ),

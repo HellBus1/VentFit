@@ -36,6 +36,9 @@ jobs:
 
     - name: Get dependencies
       run: flutter pub get
+    
+    - name: Generate necessary annotation
+      run: flutter pub run build_runner build
 
     # - name: Checking formatting issues
     #   run: flutter format --set-exit-if-changed .

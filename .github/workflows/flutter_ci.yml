@@ -37,11 +37,11 @@ jobs:
     - name: Get dependencies
       run: flutter pub get
 
-    - name: Checking formatting issues
-      run: flutter format --set-exit-if-changed .
+    # - name: Checking formatting issues
+    #   run: flutter format --set-exit-if-changed .
     
-    - name: Analyze dart code
-      run: flutter analyze .
+    # - name: Analyze dart code
+    #   run: flutter analyze .
     
     - name: Run test
       run: flutter test

@@ -37,9 +37,15 @@ class BMIBloc extends Bloc<BMIEvent, BMIState> {
     final isHeightValid = state.height.isValid();
     final isWeightValid = state.weight.isValid();
 
-    if (isHeightValid && isWeightValid) {
-      var heightValue = double.parse(state.height.getValue());
-      var weightValue = double.parse(state.weight.getValue());
+    var heightRawValue = state.height.getValue();
+    var weightRawValue = state.weight.getValue();
+
+    if (isHeightValid &&
+        isWeightValid &&
+        isNumeric(heightRawValue) &&
+        isNumeric(weightRawValue)) {
+      var heightValue = double.parse(heightRawValue);
+      var weightValue = double.parse(weightRawValue);
 
       var result = getBMI(heightValue, weightValue);
       emit(state.copyWith(
@@ -95,5 +101,9 @@ class BMIBloc extends Bloc<BMIEvent, BMIState> {
 
   double getWeight(double bmi, double height) {
     return bmi * pow((height / 100), 2);
+  }
+
+  bool isNumeric(String s) {
+    return double.tryParse(s) != null;
   }
 }

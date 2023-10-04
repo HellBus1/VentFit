@@ -55,7 +55,7 @@ For Source Code :
 GitHub provides a comprehensive contribution guide for public repositories, which can be found here: https://docs.github.com/en/get-started/quickstart/contributing-to-projects. You can also apply this method in this repository by using the "fork & pull request" feature. In addition, please follow these rules:
 
 1. Fork main repository
-  <img src="doc_assets/screenshot_5.png" width="200"/>
+  <img src="doc_assets/screenshot_5.png"/>
 2. After forking from the main repository, clone your fork to your local machine.
 3. Create a branch from "staging." After making your improvements, create the pull request there.
 4. To keep your fork updated and prevent conflicts, you must sync your fork (for a complete guide, read it here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork). Make sure to do this before submitting your pull request.

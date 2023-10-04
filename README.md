@@ -45,7 +45,7 @@ For App :
 
 For Source Code :
 
-1. Clone the repositoy or download source code.zip / source code.tar.gz
+1. Clone the repository or download source code.zip / source code.tar.gz
 2. Extract the source code
 3. Open with android studio and wait the build until done
 
@@ -54,10 +54,11 @@ For Source Code :
 ## 📑 Contribution Guide
 GitHub provides a comprehensive contribution guide for public repositories, which can be found here: https://docs.github.com/en/get-started/quickstart/contributing-to-projects. You can also apply this method in this repository by using the "fork & pull request" feature. In addition, please follow these rules:
 
-1. After forking from the main repository, clone your fork to your local machine.
-2. Create a branch from "staging." After making your improvements, create the pull request there.
-3. To keep your fork updated and prevent conflicts, you must sync your fork (for a complete guide, read it here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork). Make sure to do this before submitting your pull request.
-4. You can also open issues, and I will be happy to work on them immediately.
+1. Fork main repository <br ><img src="doc_assets/screenshot_5.png"/><br >
+2. After forking from the main repository, clone your fork to your local machine.
+3. Create a branch from "staging." After making your improvements, create the pull request there.
+4. To keep your fork updated and prevent conflicts, you must sync your fork (for a complete guide, read it here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork). Make sure to do this before submitting your pull request.
+5. You can also open issues, and I will be happy to work on them immediately.
 
 <br />
 
